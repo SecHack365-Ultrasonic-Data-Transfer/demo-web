@@ -17,7 +17,7 @@ const update = (time, radius) => {
 
     // waves
     [...document.querySelectorAll('.water-surface')].map((dom) => {
-        const area = Math.max(innerHeight, innerWidth) + 200;
+        const area = Math.max(innerHeight, innerWidth) + 100;
         const actual = getComputedStyle(dom).width.match(/\d+/)[0] >> 0;
         const expect = actual > area ? 0 : actual + 1.2;
         dom.style.height = `${expect}px`;
