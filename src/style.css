@@ -20,6 +20,8 @@ body {
 
     padding: 0;
     margin: 0;
+
+    z-index: 4;
 }
 
 /* waves */
@@ -58,8 +60,8 @@ body {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3182e0', endColorstr='#5a29c4',GradientType=1 );
 
     border-radius: 1000px;
-    height: 130px;
-    width: 130px;
+    height: 120px;
+    width: 120px;
 
     position: absolute;
     margin: 0;
@@ -77,13 +79,13 @@ body {
 
 .ball:nth-of-type(2) {
     top: 230px;
-    left: 70px;
+    left: 40px;
 
     transform: rotate(-60deg);
 }
 
 .ball:nth-of-type(3) {
-    bottom: 170px;
+    bottom: 150px;
     right: 60px;
 
     transform: rotate(-40deg);
