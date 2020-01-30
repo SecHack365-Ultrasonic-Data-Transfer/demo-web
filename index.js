@@ -1,5 +1,7 @@
 const socketio = require('socket.io');
 const http = require('http');
+
+const exec = require('child_process').exec;
 const fs = require('fs');
 
 const serverSetting = (request, response) => {
@@ -45,6 +47,13 @@ io.sockets.on('connection', socket => {
         console.log('SYS:', 'New access.');
         console.log('SYS:', 'socket.id ->', socket.id);
         console.log(`<${'-'.repeat(130)}`);
+    });
+
+    socket.on('streaming', () => {
+        exec('ls -la ./', (err, stdout, stderr) => {
+              if (err) console.log(err);
+              console.log(stdout);
+        });
     });
 });
 

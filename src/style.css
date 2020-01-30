@@ -14,6 +14,8 @@ body {
     font-family: 'Montserrat', sans-serif;
     text-align: center;
     font-size: 34px;
+
+    filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.6));
     color: #DBDBDB;
 
     width: 100%;
@@ -71,7 +73,7 @@ body {
 }
 
 .ball:nth-of-type(1) {
-    top: -50px;
+    top: 0;
     right: 20px;
 
     transform: rotate(-20deg);
@@ -130,8 +132,11 @@ body {
     text-align: center;
     font-size: 20px;
     color: #ACACAC;
+
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.6));
+    outline: none;
 }
 
 .enter::placeholder {
-    color: #CACACA;
+    color: #BEBEBE;
 }
