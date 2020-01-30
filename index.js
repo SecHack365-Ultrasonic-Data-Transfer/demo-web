@@ -1,6 +1,5 @@
 const socketio = require('socket.io');
 const http = require('http');
-const open = require('open');
 const fs = require('fs');
 
 const serverSetting = (request, response) => {
