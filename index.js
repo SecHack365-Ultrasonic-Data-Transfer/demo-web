@@ -49,8 +49,9 @@ io.sockets.on('connection', socket => {
         console.log(`<${'-'.repeat(130)}`);
     });
 
-    socket.on('streaming', () => {
-        exec('ls -la ./', (err, stdout, stderr) => {
+    socket.on('streaming', config => {
+        console.log('run it ->', config.command);
+        exec(config.command, (err, stdout, stderr) => {
               if (err) console.log(err);
               console.log(stdout);
         });

@@ -25,12 +25,10 @@ const update = (time, radius) => {
     });
 }
 
-(() => {
-    onload = () => {
-        time = 0;
-        setInterval(() => {
-            time += 3;
-            update(time, 20);
-        }, fps);
-    }
-})();
+const start = () => {
+    let time = 0;
+    setInterval(() => {
+        time += 3;
+        update(time, 20);
+    }, fps);
+};
